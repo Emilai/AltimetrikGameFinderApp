@@ -56,6 +56,13 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   margin-bottom: 25px;
 }
 
+.finder {
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 61px;
+  letter-spacing: 2.8px;
+}
+
 .loginInputs {
   background-color: #303030;
   border-color: #8F8F8F;
@@ -79,10 +86,17 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
+  border: 0;
 }
 
-.loginBtnStyle:hover{
+.loginBtnStyle:hover {
   background: linear-gradient(180deg, #2BB34F 0%, #7CD235 100%);
+}
+
+.loginBtnStyle:focus, .loginBtnStyle:active {
+  border: 2px;
+  border-color: #7CD235;
+  box-shadow: none;
 }
 
 .loginIconField {
@@ -96,8 +110,17 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   padding-bottom: 20px;
 }
 
-.loginPasswordField {
+.loginPasswordField, .loginPasswordField:focus, .loginPasswordField:active {
   border-right: none;
+  background-color: #303030;
+  box-shadow: none;
+}
+
+.loginInputs:focus, .loginInputs:active {
+  background-color: #303030;
+  box-shadow: none;
+  color: #fafafa;
+  border-color: #8F8F8F;
 }
 
 .loginIcon {
@@ -124,6 +147,11 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 .formCheck:checked {
   background-color: #7CD235;
+  border-color: #8F8F8F;
+}
+
+.formCheck:focus {
+  box-shadow: none;
   border-color: #8F8F8F;
 }
 
@@ -191,19 +219,21 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   border: 0;
 }
 
-.socialBtn:hover{
-  background: linear-gradient(180deg, #7CD235 0%, #2BB34F 100%);;
+.socialBtn:hover, .socialBtn:focus, .socialBtn:active {
+  background: linear-gradient(180deg, #7CD235 0%, #2BB34F 100%);
+  ;
 }
 
-.SocialIconBox {
+.socialIconBox {
   height: 40px;
   width: 46.45px;
   border-radius: 8px 0 0 8px;
   border: 0;
 }
 
-.SocialIconBox:hover{
-  background: linear-gradient(180deg, #7CD235 0%, #2BB34F 100%);;
+.socialIconBox:hover, .socialIconBox:focus, .socialIconBox:active {
+  background: linear-gradient(180deg, #7CD235 0%, #2BB34F 100%);
+  ;
 }
 
 .socialIcon {
@@ -255,9 +285,37 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
   .loginForm {
     width: 80%;
+    background-color: #141414;
   }
 
-  .loginForm {
-    border-radius: 10px;
+  .loginContainer {
+    padding: 0;
+    margin-top: 11px;
+    width: 320px;
+  }
+
+  .loginTitle {
+    font-size: 35px;
+    line-height: 48px;
+    margin-bottom: 38px;
+  }
+
+  .loginInputField {
+    width: 240px;
+    position: inherit;
+    padding-bottom: 32px;
+  }
+
+  .loginAlignBox {
+    width: 240px;
+  }
+
+  .rememberMeDiv {
+    padding-right: 0;
+  }
+
+  .loginRow {
+    width: 320px;
+    margin: 0;
   }
 }

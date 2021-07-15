@@ -11,8 +11,11 @@
   <meta name="keywords" content="">
 
   <!-- Mobile metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1"> -->
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <!--- Styles -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -26,35 +29,41 @@
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/161ee4a363.js" crossorigin="anonymous"></script>
 
-  <!-- javascript -->
-  <script src="assets/js/script.js"></script>
+  <!-- Bootstrap javascript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
 
 
-  <div class="container-fluid loginContainer">
-    <div class="row justify-content-center h-100">
+  <div class="container loginContainer">
+    <div class="row justify-content-center h-100 loginRow">
 
       <!-- Login Form -->
       <div class="col-md-9 col-sm-12 loginForm h-100">
         <form class="" action="index.html" method="post">
           <div class="loginAlignBox mx-auto">
-            <h1 class="loginTitle col-12">GAME<strong>FINDER</strong></h1>
+            <h1 class="loginTitle col-12">GAME<span class="finder">FINDER</span"></h1>
 
             <div class="input-group loginInputField mx-auto">
               <div class="input-group-text loginInputs loginIconField"><i class="loginIcon mx-auto"> <img src="assets/img/user.png" alt=""> </i></div>
-              <input type="text" class="form-control loginInputs" id="" placeholder="Username or email">
+              <input type="text" class="form-control loginInputs" id="usernameOrEmail" placeholder="Username or email" required>
+
             </div>
 
             <div class="input-group loginInputField mx-auto">
               <div class="input-group">
                 <div class="input-group-text loginInputs loginIconField"><i class="loginIcon mx-auto"> <img src="assets/img/key.png" alt=""> </i></div>
-                <input class="input form-control loginInputs loginPasswordField" type="password" id="password" placeholder="Password">
+                <input class="input form-control loginInputs loginPasswordField" type="password" id="password" placeholder="Password" required>
                 <span class="input-group-text passwordEye" onclick="password_show_hide();">
                   <i class="fas fa-eye eyeColor" id="show_eye"></i>
                   <i class="fas fa-eye-slash eyeColor d-none" id="hide_eye"></i>
                 </span>
+
               </div>
             </div>
 
@@ -101,17 +110,17 @@
             <div class="social">
 
               <div class="btn-group">
-                <button type="button" class="btn btn-primary btn-sm SocialIconBox BtnFacebook1"><i class="fab fa-facebook-square socialIcon fa-lg"></i></button>
+                <button type="button" class="btn btn-primary btn-sm socialIconBox BtnFacebook1"><i class="fab fa-facebook-square socialIcon fa-lg"></i></button>
                 <button type="button" class="btn btn-primary btn-md socialBtn BtnFacebook2">LOGIN WITH FACEBOOK</button>
               </div>
 
               <div class="btn-group">
-                <button type="button" class="btn btn-primary btn-sm SocialIconBox BtnTwitter1"><i class="fab fa-twitter socialIcon fa-lg"></i></button>
+                <button type="button" class="btn btn-primary btn-sm socialIconBox BtnTwitter1"><i class="fab fa-twitter socialIcon fa-lg"></i></button>
                 <button type="button" class="btn btn-primary btn-md socialBtn BtnTwitter2">LOGIN WITH TWITTER</button>
               </div>
 
               <div class="btn-group">
-                <button type="button" class="btn btn-primary btn-sm SocialIconBox BtnGoogle1"><i class="fab fa-google socialIcon fa-lg"></i></button>
+                <button type="button" class="btn btn-primary btn-sm socialIconBox BtnGoogle1"><i class="fab fa-google socialIcon fa-lg"></i></button>
                 <button type="button" class="btn btn-primary btn-md socialBtn BtnGoogle2">LOGIN WITH GOOGLE</button>
               </div>
 
@@ -139,26 +148,26 @@
           </div>
           <div class="carousel-inner h-100">
             <div class="carousel-item active h-100">
-              <img src="assets/img/demo4.jpg" class="first-slide w-100 h-100 carouselImg" id="img1" alt="">
+              <img src="assets/img/demo4.jpg" class="w-100 h-100 carouselImg" id="img1" alt="">
             </div>
             <div class="carousel-item">
-              <img src="assets/img/demo2.jpg" class="second-slide w-100 carouselImg" id="img2" alt="">
+              <img src="assets/img/demo2.jpg" class="w-100 carouselImg" id="img2" alt="">
             </div>
             <div class="carousel-item">
-              <img src="assets/img/demo3.jpg" class="third-slide w-100 carouselImg" id="img3" alt="">
-            </div>
-            <!-- <div class="carousel-item">
-              <img src="assets/img/demo.jpg" class="d-block w-100 carouselImg" id="img4" alt="">
+              <img src="assets/img/demo3.jpg" class="w-100 carouselImg" id="img3" alt="">
             </div>
             <div class="carousel-item">
-              <img src="assets/img/demo4.jpg" class="d-block w-100 carouselImg" id="img5" alt="">
+              <img src="assets/img/demo.jpg" class="w-100 carouselImg" id="img4" alt="">
             </div>
             <div class="carousel-item">
-              <img src="assets/img/demo.jpg" class="d-block w-100 carouselImg" id="img6" alt="">
+              <img src="assets/img/demo4.jpg" class="w-100 carouselImg" id="img5" alt="">
             </div>
             <div class="carousel-item">
-              <img src="assets/img/demo3.jpg" class="d-block w-100 carouselImg" id="img7" alt="">
-            </div> -->
+              <img src="assets/img/demo.jpg" class="w-100 carouselImg" id="img6" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/demo3.jpg" class="w-100 carouselImg" id="img7" alt="">
+            </div>
           </div>
 
         </div>
@@ -166,6 +175,13 @@
       <!-- End of Carousel -->
     </div>
   </div>
+
+
+
+
+  <!-- javascript -->
+  <script src="assets/js/script.js"></script>
+
 
 </body>
 
