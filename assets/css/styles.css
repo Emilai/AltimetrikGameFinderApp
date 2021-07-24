@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 }
 
 .loginBtnDiv {
-  margin-top: 22px;
+  margin-top: 15px;
 }
 
 .loginBtn {
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 .loginInputField {
   width: 330px;
   position: inherit;
-  padding-bottom: 20px;
+  padding-bottom: 32px;
 }
 
 .loginPasswordField, .loginPasswordField:focus, .loginPasswordField:active {
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   font-size: 14px;
   line-height: 19px;
   color: #FFFFFF;
-  margin-top: 40px;
+  margin-top: 21px;
 }
 
 .social {
