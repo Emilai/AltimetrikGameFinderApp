@@ -1,5 +1,5 @@
 
-// Password Show Hide
+//////////////// Password Show Hide
 
 function password_show_hide() {
   var x = document.getElementById("password");
@@ -19,10 +19,34 @@ function password_show_hide() {
 
 ///////////////////////////////////////////////////
 
-//Carousel
+/////////////////Carousel
 
 $('.carousel').carousel({
 interval: 2000
 })
 
 ///////////////////////////////////////////////////
+
+//////////////// Login validation
+
+const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', function (e) {
+  
+  
+  e.preventDefault();
+  
+  var email = document.getElementById("usernameOrEmail").value;
+  var password = document.getElementById("password").value;
+
+fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      "email": email,
+      "password": password,
+    }),
+  })})
