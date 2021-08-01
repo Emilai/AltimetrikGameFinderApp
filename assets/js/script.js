@@ -19,7 +19,7 @@ function password_show_hide() {
 
 ///////////////////////////////////////////////////
 
-/////////////////Carousel
+/////////////////Carousel (Bootstrap)
 
 $('.carousel').carousel({
 interval: 2000
@@ -27,7 +27,18 @@ interval: 2000
 
 ///////////////////////////////////////////////////
 
-//////////////// Login validation
+/////////////////Snackbar Function 
+
+var snackbarError = document.getElementById("snackbarError");
+
+function snackbarClose() {  
+  snackbarError.classList.add("d-none");
+}
+
+
+/////////////////////////////////////////////
+
+////////////// Login Functionality
 
 const loginForm = document.getElementById('loginForm');
 
@@ -36,8 +47,18 @@ loginForm.addEventListener('submit', function (e) {
   
   e.preventDefault();
   
-  var email = document.getElementById("usernameOrEmail").value;
+  var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
+  var snackbarError = document.getElementById("snackbarError");
+  var snackbarSuccess = document.getElementById("snackbarSuccess");
+  var user = document.getElementById("email");
+  var pass = document.getElementById("password");
+  var userIcon = document.getElementById("userIcon");
+  var userIconField = document.getElementById("userIconField");
+  var keyField = document.getElementById("keyField");
+  var keyIcon = document.getElementById("keyIcon");
+  var eyeField = document.getElementById("eyeField");
+
 
 fetch("http://localhost:3000/login", {
     method: "POST",
@@ -49,4 +70,35 @@ fetch("http://localhost:3000/login", {
       "email": email,
       "password": password,
     }),
-  })})
+  })
+
+  .then(function(response){
+    console.log(response.ok);
+
+    if (response.ok === true){
+
+    snackbarSuccess.classList.remove("d-none");
+    window.location.href="main.html";
+
+  } else if (user.checkValidity() == false){
+
+    user.classList.add("is-invalid");
+    userIcon.classList.add("is-invalid-icon");
+    userIconField.classList.add("is-invalid");
+
+  } else if (password.length < 4) {
+
+    pass.classList.add("is-invalid");
+    keyField.classList.add("is-invalid");
+    keyIcon.classList.add("is-invalid-icon");
+    eyeField.classList.add("is-invalid");
+
+  } else {
+    snackbarError.classList.remove("d-none");
+ 
+  }
+  })
+
+})
+
+//////////////////////////////////////////////////////////

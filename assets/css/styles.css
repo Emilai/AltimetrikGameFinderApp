@@ -66,7 +66,27 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 .loginInputs {
   background-color: #303030;
   border-color: #8F8F8F;
-  color: #929699;
+  color: #929699;  
+}
+
+.loginInputs:active {
+  background-color: #303030 !important;
+  border-color: #FFFFFF !important;
+  color: #FFFFFF;
+}
+
+.loginInputs:focus {
+  background-color: #303030 !important;
+  border-color: #FFFFFF !important;
+  color: ##8F8F8F;
+}
+
+#email, #eyeField {
+  border-radius: 0 8px 8px 0;
+}
+
+#userIconField, #keyField {
+  border-radius: 8px 0 0 8px;
 }
 
 .loginBtnDiv {
@@ -276,8 +296,61 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   border-radius: 100%;
 }
 
+.snackbarError {
+  background-color: #ED7474;
+  height: 40px;
+  width: 630px;
+  top: 120px;
+  z-index: 10;
+
+}
+
+.snackbarSuccess {
+  background-color: #88DA44;
+  height: 40px;
+  width: 630px;
+  top: 120px;
+  z-index: 10;
+
+}
+
+.snackbarBtn {
+  margin-right: 0;
+  align-self: center;
+  padding: 0;
+  
+}
+
+.snackbarErrorText {
+ margin: 0 0 0 8px;
+ color: #FFFFFF;
+ padding-top: 11px;
+ font-size: 14px;
+ line-height: 19px;
+}
+
+.is-invalid {
+  border-color: #E07979 !important;
+  background-image: none !important;
+  color: #E07979 !important;
+}
+
+.is-invalid-icon {
+  filter: invert(57%) sepia(90%) saturate(336%) hue-rotate(314deg) brightness(91%) contrast(91%);
+}
+
+.invalid-feedback {
+  color: #E07979 !important;
+  font-size: 14px !important;
+  line-height: 19px !important;
+}
 /************************************** Responsive Login ***********************************/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  
+  body {
+    background-color: #303030;
+  }
+
   .loginCarousel {
     visibility: hidden;
     width: 1px;
@@ -285,19 +358,29 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
   .loginForm {
     width: 80%;
-    background-color: #141414;
+    background-color: #303030;
   }
 
   .loginContainer {
     padding: 0;
     margin-top: 11px;
     width: 320px;
+    background-color: #303030;
   }
 
   .loginTitle {
     font-size: 35px;
     line-height: 48px;
     margin-bottom: 38px;
+    font-weight: 400px;
+    font-style: normal;
+  }
+  .finder {
+    font-size: 35px;
+    line-height: 48px;
+    margin-bottom: 38px;
+    font-weight: 800px;
+    font-style: normal;
   }
 
   .loginInputField {
@@ -317,5 +400,15 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   .loginRow {
     width: 320px;
     margin: 0;
+  }
+
+  .snackbarError {
+    width: 300px;
+    top: 30px;
+  }
+
+  .snackbarSuccess {
+    width: 300px;
+    top: 30px;
   }
 }
