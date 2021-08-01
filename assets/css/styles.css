@@ -2,7 +2,15 @@ body {
   background-color: #141414;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -66,7 +74,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 .loginInputs {
   background-color: #303030;
   border-color: #8F8F8F;
-  color: #929699;  
+  color: #929699;
 }
 
 .loginInputs:active {
@@ -81,11 +89,13 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   color: ##8F8F8F;
 }
 
-#email, #eyeField {
+#email,
+#eyeField {
   border-radius: 0 8px 8px 0;
 }
 
-#userIconField, #keyField {
+#userIconField,
+#keyField {
   border-radius: 8px 0 0 8px;
 }
 
@@ -113,7 +123,8 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   background: linear-gradient(180deg, #2BB34F 0%, #7CD235 100%);
 }
 
-.loginBtnStyle:focus, .loginBtnStyle:active {
+.loginBtnStyle:focus,
+.loginBtnStyle:active {
   border: 2px;
   border-color: #7CD235;
   box-shadow: none;
@@ -130,13 +141,16 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   padding-bottom: 32px;
 }
 
-.loginPasswordField, .loginPasswordField:focus, .loginPasswordField:active {
+.loginPasswordField,
+.loginPasswordField:focus,
+.loginPasswordField:active {
   border-right: none;
   background-color: #303030;
   box-shadow: none;
 }
 
-.loginInputs:focus, .loginInputs:active {
+.loginInputs:focus,
+.loginInputs:active {
   background-color: #303030;
   box-shadow: none;
   color: #fafafa;
@@ -239,7 +253,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   border: 0;
 }
 
-.socialBtn:hover, .socialBtn:focus, .socialBtn:active {
+.socialBtn:hover,
+.socialBtn:focus,
+.socialBtn:active {
   background: linear-gradient(180deg, #7CD235 0%, #2BB34F 100%);
   ;
 }
@@ -251,7 +267,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   border: 0;
 }
 
-.socialIconBox:hover, .socialIconBox:focus, .socialIconBox:active {
+.socialIconBox:hover,
+.socialIconBox:focus,
+.socialIconBox:active {
   background: linear-gradient(180deg, #7CD235 0%, #2BB34F 100%);
   ;
 }
@@ -318,15 +336,15 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   margin-right: 0;
   align-self: center;
   padding: 0;
-  
+
 }
 
 .snackbarErrorText {
- margin: 0 0 0 8px;
- color: #FFFFFF;
- padding-top: 11px;
- font-size: 14px;
- line-height: 19px;
+  margin: 0 0 0 8px;
+  color: #FFFFFF;
+  padding-top: 11px;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .is-invalid {
@@ -344,9 +362,10 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   font-size: 14px !important;
   line-height: 19px !important;
 }
+
 /************************************** Responsive Login ***********************************/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  
+
   body {
     background-color: #303030;
   }
@@ -375,6 +394,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     font-weight: 400px;
     font-style: normal;
   }
+
   .finder {
     font-size: 35px;
     line-height: 48px;
