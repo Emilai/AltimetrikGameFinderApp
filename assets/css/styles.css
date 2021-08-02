@@ -89,13 +89,11 @@ button {
   color: ##8F8F8F;
 }
 
-#email,
-#eyeField {
+#email, #eyeField {
   border-radius: 0 8px 8px 0;
 }
 
-#userIconField,
-#keyField {
+#userIconField, #keyField {
   border-radius: 8px 0 0 8px;
 }
 
